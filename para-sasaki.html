@@ -1,0 +1,53 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <!-- Required meta tags -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    
+    <!-- Bootstrap CSS -->
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+    <script src="https://cdn.jsdelivr.net/npm/typed.js@2.0.9"></script>
+    <title>Escrita!</title>
+    <style>
+        #escritinha {
+            background: rgb(90,185,177);
+            background: linear-gradient(90deg, rgba(90,185,177,1) 0%, rgba(18,73,65,1) 100%);   
+            height: 100vh;
+        }
+    </style>
+</head>
+<body>
+    <section id="escritinha" class="d-flex align-items-center">
+        <div class="container">
+            <div class="card">
+                <div class="card-body">
+                    <span id="texto"></span>
+                </div>
+            </div>
+        </div>
+    </section>
+    
+    <!-- Optional JavaScript -->
+    <!-- jQuery first, then Popper.js, then Bootstrap JS -->
+    <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js" integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1" crossorigin="anonymous"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js" integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/typed.js@2.0.9"></script>
+    <script>
+        let configuracao = {
+            // A lista de frases que aparecerão
+            // está string podem conter tags html
+            strings: ["Oi, <i>Sasaki, Amor da minha vida</i>.", "Tudo Bem?", "Criei isso aqui só pra dizer que eu te amo! ^1000 Você não faz ideia do quanto!!!... ^1000 eu te amo ENORMES E GIGANTES!", "Feliz aniversário meu amor, é noiz nessa porra! ^1000 não duvide do meu amor por voce! de verdade, eu te amo pra um CARALHO!", "Espero de verdade que seu dia seja feliz, mas não só hoje, e sim todos os dias! ^1000 Eu amo seu sorriso, você não faz ideia do quanto!"],
+            loop: true,
+            startDelay: 2000,
+            // A velocidade que é digitado
+            typeSpeed: 100
+        }
+        // O Objeto precisará recebe 2 parametros,
+        // 1º: Uma string começando com # para id ou . para classe html
+        // 2º: o objeto de configuração
+        let typed = new Typed("#texto", configuracao);
+    </script>
+</body>
+</html>
