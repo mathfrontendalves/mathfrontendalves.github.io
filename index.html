@@ -15,6 +15,36 @@
             background: linear-gradient(90deg, rgba(90,185,177,1) 0%, rgba(18,73,65,1) 100%);   
             height: 100vh;
         }
+
+        .button {
+            max-width: 80%;
+            margin: auto;
+            animation-name: pulse;
+                -webkit-animation-name: pulse;
+                animation-duration: 1.5s;
+                -webkit-animation-duration: 1.5s;
+                animation-iteration-count: infinite;
+                -webkit-animation-iteration-count: infinite
+        }
+        @keyframes pulse {
+                0%,
+                100% {
+                    transform: scale(.9)
+                }
+                50% {
+                    transform: scale(1)
+                }
+            }
+            
+            @-webkit-keyframes pulse {
+                0%,
+                100% {
+                    -webkit-transform: scale(.95)
+                }
+                50% {
+                    -webkit-transform: scale(1)
+                }
+            }
     </style>
 </head>
 <body>
@@ -24,6 +54,9 @@
                 <div class="card-body">
                     <span id="texto"></span>
                 </div>
+            </div>
+            <div class="button mt-5 text-center">
+                <iframe width="100%" height="300" scrolling="no" frameborder="no" allow="autoplay" src="https://w.soundcloud.com/player/?url=https%3A//api.soundcloud.com/tracks/49668839&color=%23ff5500&auto_play=true&hide_related=false&show_comments=true&show_user=true&show_reposts=false&show_teaser=true&visual=true"></iframe><div style="font-size: 10px; color: #cccccc;line-break: anywhere;word-break: normal;overflow: hidden;white-space: nowrap;text-overflow: ellipsis; font-family: Interstate,Lucida Grande,Lucida Sans Unicode,Lucida Sans,Garuda,Verdana,Tahoma,sans-serif;font-weight: 100;"><a href="https://soundcloud.com/user7393752" title="user7393752" target="_blank" style="color: #cccccc; text-decoration: none;">user7393752</a> · <a href="https://soundcloud.com/user7393752/scorpions-always-somewhere" title="Scorpions_Always Somewhere" target="_blank" style="color: #cccccc; text-decoration: none;">Scorpions_Always Somewhere</a></div>
             </div>
         </div>
     </section>
@@ -38,7 +71,7 @@
         let configuracao = {
             // A lista de frases que aparecerão
             // está string podem conter tags html
-            strings: ["Oi, <i>Sasaki, Amor da minha vida</i>.", "Tudo Bem? ^1000 Espero que sim! Hoje é seu dia, e... ^1000", "Criei isso aqui só pra dizer que... ^1000 eu te amo! ^1000 Você não faz ideia do quanto!!!... ^1000 eu te amo ENORMES E GIGANTES!", "Feliz aniversário meu amor, ^1000 é noiz nessa porra! ^1000 não duvide do meu amor por voce! ^1000 De verdade, eu te amo pra um CARALHO!", "Espero de verdade que seu dia seja feliz, ^1000 mas não só hoje, e sim todos os dias! ^1000 Eu amo seu sorriso, você não faz ideia do quanto! ^1000 quero te fazer sorrir TODOS OS DIAS!", "Feliz 20 anos, coisa linda da minha vida! ^1000 Minha maluca, Minha surtada, Minha gostosa... ^1000 Minha <3"],
+            strings: ["Oi, <i>Sasaki, Amor da minha vida</i>.", "Tudo Bem? ^1000 Espero que sim! Hoje é seu dia, e... ^1000", "Criei isso aqui só pra dizer que... ^1000 eu te amo! ^1000 Você não faz ideia do quanto!!!... ^1000 eu te amo ENORMES E GIGANTES!", "Feliz aniversário meu amor, ^1000 é noiz nessa porra! ^1000 não duvide do meu amor por voce! ^1000 De verdade, eu te amo pra um CARALHO!", "Espero de verdade que seu dia seja feliz, ^1000 mas não só hoje, e sim todos os dias! ^1000 Eu amo seu sorriso, você não faz ideia do quanto! ^1000 quero te fazer sorrir TODOS OS DIAS!", "Feliz 20 anos, coisa linda da minha vida!", "^Minha maluca, Minha surtada, Minha gostosa... ^1000 Minha <3", "E sim, essa definitivamente é a NOSSA musica!! Eu te AMO!"],
             loop: true,
             startDelay: 2000,
             // A velocidade que é digitado
